@@ -31,7 +31,6 @@ namespace color {
     template <class CharT, class Traits>
     constexpr std::basic_ostream<CharT, Traits>& white(std::basic_ostream<CharT, Traits>&);
 
-    // Jasne kolory tekstu
     template <class CharT, class Traits>
     constexpr std::basic_ostream<CharT, Traits>& bright_black(std::basic_ostream<CharT, Traits>&);
 
