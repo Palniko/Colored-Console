@@ -1,13 +1,4 @@
-#pragma once
-#include <ostream>
-#include <iostream>
-
-/*
-
-  use cout, example:
-  std::cout << clearConsole << color::red << "i am red " << color::reset << "i am white"; 
-
-*/
+#include "coloredConsole.h"
 
 namespace color {
 
