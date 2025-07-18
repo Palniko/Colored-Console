@@ -1,119 +1,56 @@
-#ifndef COLORED_CONSOLE_H
-#define COLORED_CONSOLE_H
-#include <ostream>
+#pragma once
 
 namespace color {
+	// Reset
+	const char reset[] = "\033[0m";
 
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& reset(std::basic_ostream<CharT, Traits>&);
+	// Style
+	const char bold[] = "\033[1m";
+	const char dim[] = "\033[2m";
+	const char italic[] = "\033[3m";
+	const char underline[] = "\033[4m";
+	const char blink[] = "\033[5m";
+	const char reverse[] = "\033[7m";
+	const char hidden[] = "\033[8m";
+	const char strikethrough[] = "\033[9m";
 
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& black(std::basic_ostream<CharT, Traits>&);
+	// Regular Foreground Colors
+	const char black[] = "\033[30m";
+	const char red[] = "\033[31m";
+	const char green[] = "\033[32m";
+	const char yellow[] = "\033[33m";
+	const char blue[] = "\033[34m";
+	const char magenta[] = "\033[35m";
+	const char cyan[] = "\033[36m";
+	const char white[] = "\033[37m";
 
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& red(std::basic_ostream<CharT, Traits>&);
+	// Bright Foreground Colors
+	const char bright_black[] = "\033[90m";
+	const char bright_red[] = "\033[91m";
+	const char bright_green[] = "\033[92m";
+	const char bright_yellow[] = "\033[93m";
+	const char bright_blue[] = "\033[94m";
+	const char bright_magenta[] = "\033[95m";
+	const char bright_cyan[] = "\033[96m";
+	const char bright_white[] = "\033[97m";
 
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& green(std::basic_ostream<CharT, Traits>&);
+	// Background Colors
+	const char bg_black[] = "\033[40m";
+	const char bg_red[] = "\033[41m";
+	const char bg_green[] = "\033[42m";
+	const char bg_yellow[] = "\033[43m";
+	const char bg_blue[] = "\033[44m";
+	const char bg_magenta[] = "\033[45m";
+	const char bg_cyan[] = "\033[46m";
+	const char bg_white[] = "\033[47m";
 
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& yellow(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& blue(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& magenta(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& cyan(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& white(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_black(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_red(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_green(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_yellow(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_blue(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_magenta(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_cyan(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bright_white(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_black(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_red(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_green(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_yellow(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_blue(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_magenta(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_cyan(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_white(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_black(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_red(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_green(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_yellow(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_blue(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_magenta(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_cyan(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bg_bright_white(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& bold(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& underline(std::basic_ostream<CharT, Traits>&);
-
-    template <class CharT, class Traits>
-    constexpr std::basic_ostream<CharT, Traits>& reversed(std::basic_ostream<CharT, Traits>&);
+	// Bright Background Colors
+	const char bg_bright_black[] = "\033[100m";
+	const char bg_bright_red[] = "\033[101m";
+	const char bg_bright_green[] = "\033[102m";
+	const char bg_bright_yellow[] = "\033[103m";
+	const char bg_bright_blue[] = "\033[104m";
+	const char bg_bright_magenta[] = "\033[105m";
+	const char bg_bright_cyan[] = "\033[106m";
+	const char bg_bright_white[] = "\033[107m";
 }
-
-template <class CharT, class Traits>
-constexpr std::basic_ostream<CharT, Traits>& clearConsole(std::basic_ostream<CharT, Traits>&);
-
-#endif
